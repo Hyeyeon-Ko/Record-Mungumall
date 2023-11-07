@@ -1,0 +1,21 @@
+
+server:
+  port: 8001
+
+# datasource config
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mungumall?serverTimezone=Asia/Seoul
+    username: hyeyeon
+    password: rhgPdus00@!
+
+
+# mybatis config
+mybatis:
+  mapper-locations: mappers/**/*.xml
+
+# logging level
+logging:
+  level:
+    '[com.example.mungumall]': debug

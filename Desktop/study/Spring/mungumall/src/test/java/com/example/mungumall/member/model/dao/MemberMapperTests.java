@@ -1,0 +1,57 @@
+package com.example.mungumall.member.model.dao;
+
+import com.example.mungumall.config.MungumallApplication;
+import com.example.mungumall.member.model.dto.MemberDTO;
+import com.example.mungumall.member.model.dto.RoleDTO;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.ContextConfiguration;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
+@SpringBootTest
+@ContextConfiguration(classes = {MungumallApplication.class})
+public class MemberMapperTests {
+
+    @Autowired
+    private MemberMapper memberMapper;
+
+    @Test
+    @DisplayName("매퍼 인터페이스 의존성 주입 테스트")
+    public void testInit() {
+        assertNotNull(memberMapper);
+        /* 1. dao 폴더 하위 MemberMapper 인터페이스에 @Mapper 등록
+         * 2. config 폴더 하위 MybatisConfiguration 클래스에 @MapperScan 적용
+         */
+    }
+
+    @Test
+    @DisplayName("신규 회원 등록용 매퍼 성공 테스트")
+    public void testSignUpMember() {
+
+        //given
+        MemberDTO member = new MemberDTO();
+        member.setMemberId("user01");
+        member.setMemberPwd("pass01");
+        member.setName("김회원");
+        member.setPhone("01000010001");
+        member.setEmail("test@reminder.com");
+        member.setAddress("서울특별시");
+        member.setAgreement('Y');
+
+        RoleDTO role = new RoleDTO();
+        role.setMemberId(member.getMemberId());
+        role.setAuthorityCode(1);
+
+        //when
+        int resultA = memberMapper.insertMember(member);
+        int resultB = memberMapper.insertRole(role);
+
+        //then
+        assertEquals(1, resultA);
+        assertEquals(1, resultB);
+    }
+}
