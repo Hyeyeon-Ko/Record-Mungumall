@@ -35,10 +35,10 @@
     </style>
 </head>
 <body>
-<header th:replace="/fragments/header.html :: header"></header>
+<header th:replace="~{/fragments/header.html :: header}"></header>
 
 <div layout:fragment="content"></div>
 
-<footer th:replace="/fragments/footer.html :: footer"></footer>
+<footer th:replace="~{/fragments/footer.html :: footer}"></footer>
 </body>
 </html>
