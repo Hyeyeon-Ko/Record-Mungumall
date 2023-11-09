@@ -36,7 +36,6 @@ public class MemberController {
          * 2. classpath 하위에 messages 폴더 및 properties 파일 생성
          */
     }
-
     /**
      * 커스터마이징한 유효성 검증 추가
      */
