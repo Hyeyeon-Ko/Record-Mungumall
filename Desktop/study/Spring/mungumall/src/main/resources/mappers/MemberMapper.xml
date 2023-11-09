@@ -131,13 +131,13 @@
         WHERE EMAIL = #{ email }
     </select>
 
-    <!-- 회원가입 완료 시 이메일 인증 후 계정 활성화 -->
-    <update id="updateAccActivation">
-        UPDATE
-        TBL_MEMBER
-        SET ACC_INACTIVE_YN = 'N'
-        WHERE MEMBER_ID = #{ memberId }
-    </update>
+<!--    &lt;!&ndash; 회원가입 완료 시 이메일 인증 후 계정 활성화 &ndash;&gt;-->
+<!--    <update id="updateAccActivation">-->
+<!--        UPDATE-->
+<!--        TBL_MEMBER-->
+<!--        SET ACC_INACTIVE_YN = 'N'-->
+<!--        WHERE MEMBER_ID = #{ memberId }-->
+<!--    </update>-->
 
     <!-- 로그인 성공 시 실패 횟수 리셋 -->
     <update id="updateFailCountReset">

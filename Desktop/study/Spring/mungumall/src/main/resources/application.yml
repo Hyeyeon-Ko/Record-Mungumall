@@ -10,6 +10,15 @@ spring:
     username: hyeyeon
     password: rhgPdus00@!
 
+  jpa:
+    open-in-view: true
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    #show-sql: true
+    properties:
+      hibernate.format_sql: true
+
 
 # mybatis config
 mybatis:
