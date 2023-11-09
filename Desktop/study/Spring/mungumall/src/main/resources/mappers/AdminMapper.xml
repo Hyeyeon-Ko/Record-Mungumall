@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.reminder.geulbeotmall.admin.model.dao.AdminMapper">
-    <resultMap id="memberResultMap" type="com.reminder.geulbeotmall.member.model.dto.MemberDTO">
+<mapper namespace="com.example.mungumall.admin.model.dao.AdminMapper">
+    <resultMap id="memberResultMap" type="com.example.mungumall.member.model.dto.MemberDTO">
         <id property="memberId" column="MEMBER_ID"/>
         <result property="memberPwd" column="MEMBER_PWD"/>
         <result property="name" column="NAME"/>
@@ -21,13 +21,13 @@
         <collection property="roleList" resultMap="roleResultMap"/> <!-- 1:N -->
     </resultMap>
 
-    <resultMap id="roleResultMap" type="com.reminder.geulbeotmall.member.model.dto.RoleDTO">
+    <resultMap id="roleResultMap" type="com.example.mungumall.member.model.dto.RoleDTO">
         <id property="memberId" column="REF_MEMBER_ID"/>
         <id property="authorityCode" column="REF_AUTHORITY_CODE"/>
         <association property="authority" resultMap="authorityResultMap"/> <!-- 1:1 -->
     </resultMap>
 
-    <resultMap id="authorityResultMap" type="com.reminder.geulbeotmall.member.model.dto.AuthorityDTO">
+    <resultMap id="authorityResultMap" type="com.example.mungumall.member.model.dto.AuthorityDTO">
         <id property="authCode" column="AUTHORITY_CODE"/>
         <result property="authName" column="AUTHORITY_NAME"/>
         <result property="authDesc" column="AUTHORITY_DESC"/>

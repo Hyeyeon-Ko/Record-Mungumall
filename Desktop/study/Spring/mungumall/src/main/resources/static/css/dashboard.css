@@ -1,15 +1,5 @@
 @charset "UTF-8";
-/*!
-* Start Bootstrap - SB Admin v7.0.5 (https://startbootstrap.com/template/sb-admin)
-* Copyright 2013-2022 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-sb-admin/blob/master/LICENSE)
-*/
-/*!
- * Bootstrap v5.1.3 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
+
 :root {
     --bs-blue: #0d6efd;
     --bs-indigo: #6610f2;
@@ -83,7 +73,6 @@ body {
     font-weight: var(--bs-body-font-weight);
     line-height: var(--bs-body-line-height);
     color: var(--bs-body-color);
-    text-align: var(--bs-body-text-align);
     background-color: var(--bs-body-bg);
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -595,7 +584,7 @@ progress {
     color: #6c757d;
 }
 .blockquote-footer::before {
-    content: "— ";
+    content: "— ";
 }
 
 .img-fluid {
@@ -2695,10 +2684,6 @@ textarea.form-control-lg {
 .form-floating > .form-control::placeholder, .form-floating > .dataTable-input::placeholder {
     color: transparent;
 }
-.form-floating > .form-control:not(:-moz-placeholder-shown), .form-floating > .dataTable-input:not(:-moz-placeholder-shown) {
-    padding-top: 1.625rem;
-    padding-bottom: 0.625rem;
-}
 .form-floating > .form-control:not(:-ms-input-placeholder), .form-floating > .dataTable-input:not(:-ms-input-placeholder) {
     padding-top: 1.625rem;
     padding-bottom: 0.625rem;
@@ -2714,10 +2699,6 @@ textarea.form-control-lg {
 .form-floating > .form-select, .form-floating > .dataTable-selector {
     padding-top: 1.625rem;
     padding-bottom: 0.625rem;
-}
-.form-floating > .form-control:not(:-moz-placeholder-shown) ~ label, .form-floating > .dataTable-input:not(:-moz-placeholder-shown) ~ label {
-    opacity: 0.65;
-    transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
 }
 .form-floating > .form-control:not(:-ms-input-placeholder) ~ label, .form-floating > .dataTable-input:not(:-ms-input-placeholder) ~ label {
     opacity: 0.65;
@@ -4132,7 +4113,6 @@ textarea.form-control-lg {
 }
 
 .navbar-nav-scroll {
-    max-height: var(--bs-scroll-height, 75vh);
     overflow-y: auto;
 }
 
@@ -4804,7 +4784,6 @@ textarea.form-control-lg {
     float: left;
     padding-right: 0.5rem;
     color: #6c757d;
-    content: var(--bs-breadcrumb-divider, "/") /* rtl: var(--bs-breadcrumb-divider, "/") */;
 }
 .breadcrumb-item.active {
     color: #6c757d;
@@ -5459,8 +5438,6 @@ textarea.form-control-lg {
 }
 
 .toast-container {
-    width: -webkit-max-content;
-    width: -moz-max-content;
     width: max-content;
     max-width: 100%;
     pointer-events: none;
@@ -6421,7 +6398,6 @@ textarea.form-control-lg {
     }
 }
 .placeholder-wave {
-    -webkit-mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
     mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
     -webkit-mask-size: 200% 100%;
     mask-size: 200% 100%;
@@ -6554,7 +6530,6 @@ textarea.form-control-lg {
 }
 
 .sticky-top {
-    position: -webkit-sticky;
     position: sticky;
     top: 0;
     z-index: 1020;
@@ -6562,7 +6537,6 @@ textarea.form-control-lg {
 
 @media (min-width: 576px) {
     .sticky-sm-top {
-        position: -webkit-sticky;
         position: sticky;
         top: 0;
         z-index: 1020;
@@ -6570,7 +6544,6 @@ textarea.form-control-lg {
 }
 @media (min-width: 768px) {
     .sticky-md-top {
-        position: -webkit-sticky;
         position: sticky;
         top: 0;
         z-index: 1020;
@@ -6578,7 +6551,6 @@ textarea.form-control-lg {
 }
 @media (min-width: 992px) {
     .sticky-lg-top {
-        position: -webkit-sticky;
         position: sticky;
         top: 0;
         z-index: 1020;
@@ -6586,7 +6558,6 @@ textarea.form-control-lg {
 }
 @media (min-width: 1200px) {
     .sticky-xl-top {
-        position: -webkit-sticky;
         position: sticky;
         top: 0;
         z-index: 1020;
@@ -6594,7 +6565,6 @@ textarea.form-control-lg {
 }
 @media (min-width: 1400px) {
     .sticky-xxl-top {
-        position: -webkit-sticky;
         position: sticky;
         top: 0;
         z-index: 1020;
@@ -6797,7 +6767,6 @@ textarea.form-control-lg {
 }
 
 .position-sticky {
-    position: -webkit-sticky !important;
     position: sticky !important;
 }
 
@@ -11698,4 +11667,27 @@ body {
     width: 20px !important;
     font-size: 0.75rem;
     border-radius: 0.25rem !important;
+}
+
+/* 전체 폰트 적용 */
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+.navbar-brand {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    padding-left: 0!important;
+}
+
+.link a {
+    color: #6c757d;
+}
+
+h1 {
+    font-family: 'Gowun Dodum', sans-serif;
+    font-weight: 700;
+    margin-top: 1.5rem !important;
+    text-align: center;
 }
