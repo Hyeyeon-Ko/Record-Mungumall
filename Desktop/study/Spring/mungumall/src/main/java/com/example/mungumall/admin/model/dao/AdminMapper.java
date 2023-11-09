@@ -1,6 +1,7 @@
 package com.example.mungumall.admin.model.dao;
 
 import com.example.mungumall.member.model.dto.MemberDTO;
+import com.example.mungumall.paging.model.dto.Criteria;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -8,7 +9,7 @@ import java.util.List;
 @Mapper
 public interface AdminMapper {
 
-    List<MemberDTO> getMemberList();
+    List<MemberDTO> getMemberList(Criteria criteria);
 
     MemberDTO getMemberDetails(String memberId);
 

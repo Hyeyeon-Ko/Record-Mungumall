@@ -2,6 +2,7 @@ package com.example.mungumall.admin.model.service;
 
 import com.example.mungumall.admin.model.dao.AdminMapper;
 import com.example.mungumall.member.model.dto.MemberDTO;
+import com.example.mungumall.paging.model.dto.Criteria;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,8 +19,8 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public List<MemberDTO> getMemberList() {
-        List<MemberDTO> memberList = adminMapper.getMemberList();
+    public List<MemberDTO> getMemberList(Criteria criteria) {
+        List<MemberDTO> memberList = adminMapper.getMemberList(criteria);
         return memberList;
     }
 
@@ -29,6 +30,9 @@ public class AdminServiceImpl implements AdminService {
         return member;
     }
 
+    /**
+     * @return totalRecordCount
+     */
     @Override
     public int getTotalNumber() {
         int total = adminMapper.getTotalNumber();

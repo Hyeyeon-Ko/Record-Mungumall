@@ -1,12 +1,13 @@
 package com.example.mungumall.admin.model.service;
 
 import com.example.mungumall.member.model.dto.MemberDTO;
+import com.example.mungumall.paging.model.dto.Criteria;
 
 import java.util.List;
 
 public interface AdminService {
 
-    List<MemberDTO> getMemberList();
+    List<MemberDTO> getMemberList(Criteria criteria);
 
     MemberDTO getMemberDetails(String memberId);
 
